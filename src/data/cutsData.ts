@@ -31,7 +31,7 @@ export const BRAND_INFO = {
   instagramHandle: "@cutsstudio01",
   instagramUrl: "https://www.instagram.com/cutsstudio01/",
   googleMapsUrl: "https://maps.google.com/?q=Rua+Pandalhos,+1012,+Jardim+Guaruja,+Sao+Paulo+-+SP",
-  whatsappNumber: "5511999999999", // Facilmente editável pelo barbeiro
+  whatsappNumber: "5511987943907", // Thiago Menezes - CUTS STUDIOS
   hours: [
     { days: "Terça a Domingo", time: "09:00 — 19:00" },
     { days: "Segunda-feira", time: "Fechado" }
@@ -167,8 +167,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Degradê Mid Fade Definido",
     subtitle: "Visão Frontal e Posterior em Detalhes de Acabamento",
     category: "Degradê / Navalhado",
-    frontImage: "/cliente1.jpg",
-    backImage: "/cliente1.costa.jpg",
+    frontImage: "/img/cliente1.jpg",
+    backImage: "/img/cliente1.costa.jpg",
     badge: "Visão 360°",
     details: ["Transição Mid Fade", "Acabamento na Navalha", "Topo com Textura Natural"]
   },
@@ -177,8 +177,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Low Fade com Precisão de Nuca",
     subtitle: "Alinhamento Perfeito de Contornos e Transição",
     category: "Degradê de Precisão",
-    frontImage: "/cliente2.jpg",
-    backImage: "/cliente2.costa.jpg",
+    frontImage: "/img/cliente2.jpg",
+    backImage: "/img/cliente2.costa.jpg",
     badge: "Visão 360°",
     details: ["Low Fade Limpo", "Contorno Navalhado", "Finalização Matte"]
   },
@@ -187,7 +187,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Processo & Atenção aos Detalhes",
     subtitle: "Thiago Menezes em ação durante o atendimento residencial",
     category: "Atendimento VIP",
-    frontImage: "/manim.thiago.jpg",
+    frontImage: "/img/manim.thiago.jpg",
     badge: "Bastidores",
     details: ["Foco Individual", "Ferramentas Profissionais", "Atendimento Residencial"]
   }

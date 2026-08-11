@@ -63,7 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           >
             <div className="relative h-10 w-10 md:h-11 md:w-11 rounded-full overflow-hidden p-[1px] bg-gradient-to-tr from-[#C9A227] to-[#E7C75F]/40 transition-transform duration-300 group-hover:scale-105">
               <img
-                src="/logo.jpg"
+                src="/img/logo.jpg"
                 alt="CUTS STUDIOS Logo"
                 className="h-full w-full object-cover rounded-full bg-[#0D0D0D]"
               />

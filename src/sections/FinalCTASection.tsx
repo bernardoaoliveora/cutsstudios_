@@ -15,7 +15,7 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenBooking 
       {/* Subtle Logo Watermark in Background */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
         <img
-          src="/logo.jpg"
+          src="/img/logo.jpg"
           alt="CUTS Watermark"
           className="w-[600px] h-[600px] object-cover rounded-full filter grayscale"
         />

@@ -44,7 +44,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             >
               <div className="h-20 w-20 md:h-24 md:w-24 rounded-full overflow-hidden bg-[#0D0D0D] flex items-center justify-center p-1">
                 <img
-                  src="/logo.jpg"
+                  src="/img/logo.jpg"
                   alt="CUTS STUDIOS"
                   className="h-full w-full object-cover rounded-full"
                 />

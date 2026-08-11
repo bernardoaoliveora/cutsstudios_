@@ -140,7 +140,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking }) => {
               {/* Photo */}
               <div className="w-full h-full rounded-[22px] overflow-hidden relative group bg-[#0D0D0D]">
                 <img
-                  src="/thiago2.jpg"
+                  src="/img/thiago2.jpg"
                   alt="Barbeiro Thiago Menezes - CUTS STUDIOS"
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />

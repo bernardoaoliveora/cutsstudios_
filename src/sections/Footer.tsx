@@ -16,7 +16,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           <div className="md:col-span-4 space-y-4">
             <a href="#hero" className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-full overflow-hidden p-[1px] bg-gradient-to-tr from-[#C9A227] to-[#E7C75F]">
-                <img src="/logo.jpg" alt="CUTS STUDIOS Logo" className="h-full w-full object-cover rounded-full bg-[#0D0D0D]" />
+                <img src="/img/logo.jpg" alt="CUTS STUDIOS Logo" className="h-full w-full object-cover rounded-full bg-[#0D0D0D]" />
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-extrabold text-xl text-white">CUTS STUDIOS</span>
