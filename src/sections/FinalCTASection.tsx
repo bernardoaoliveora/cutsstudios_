@@ -8,20 +8,20 @@ interface FinalCTASectionProps {
 
 export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenBooking }) => {
   return (
-    <section className="py-28 md:py-36 bg-[#050505] relative overflow-hidden flex items-center justify-center border-t border-white/5">
+    <section className="py-28 md:py-36 bg-[#050505] relative overflow-hidden flex items-center justify-center border-t border-white/5 max-w-full">
       {/* Background Cinematic Atmosphere */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-[#C9A227]/20 via-[#E7C75F]/10 to-transparent rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[800px] h-[320px] sm:h-[800px] max-w-full bg-gradient-to-tr from-[#C9A227]/20 via-[#E7C75F]/10 to-transparent rounded-full blur-[120px] sm:blur-[180px] pointer-events-none" />
 
       {/* Subtle Logo Watermark in Background */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none overflow-hidden">
         <img
           src="/img/logo.jpg"
           alt="CUTS Watermark"
-          className="w-[600px] h-[600px] object-cover rounded-full filter grayscale"
+          className="w-[280px] sm:w-[600px] h-[280px] sm:h-[600px] max-w-full object-cover rounded-full filter grayscale"
         />
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
         
         {/* Animated Badge */}
         <motion.div
@@ -69,11 +69,11 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenBooking 
           <button
             onClick={onOpenBooking}
             data-cursor-hover
-            className="px-10 py-5 rounded-full bg-gradient-to-r from-[#E7C75F] via-[#C9A227] to-[#E7C75F] bg-[length:200%_auto] text-[#050505] font-black text-xs sm:text-sm uppercase tracking-[0.25em] flex items-center gap-4 shadow-2xl shadow-[#C9A227]/30 hover:shadow-[#C9A227]/50 hover:scale-105 active:scale-95 transition-all duration-300"
+            className="w-full sm:w-auto px-6 sm:px-10 py-5 rounded-full bg-gradient-to-r from-[#E7C75F] via-[#C9A227] to-[#E7C75F] bg-[length:200%_auto] text-[#050505] font-black text-xs sm:text-sm uppercase tracking-[0.25em] flex items-center justify-center gap-3 sm:gap-4 shadow-2xl shadow-[#C9A227]/30 hover:shadow-[#C9A227]/50 hover:scale-105 active:scale-95 transition-all duration-300"
           >
-            <MessageSquare className="w-5 h-5 fill-current" />
+            <MessageSquare className="w-5 h-5 fill-current shrink-0" />
             <span>AGENDAR PELO WHATSAPP</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5 shrink-0" />
           </button>
         </motion.div>
 

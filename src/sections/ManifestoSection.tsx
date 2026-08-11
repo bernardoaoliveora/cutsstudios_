@@ -7,14 +7,14 @@ export const ManifestoSection: React.FC = () => {
   return (
     <section
       id="manifesto"
-      className="relative py-28 md:py-36 bg-[#050505] border-y border-white/5 overflow-hidden flex items-center justify-center"
+      className="relative py-28 md:py-36 bg-[#050505] border-y border-white/5 overflow-hidden flex items-center justify-center max-w-full"
     >
       {/* Background Accent Lines */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
-        <div className="w-[800px] h-[1px] bg-gradient-to-r from-transparent via-[#C9A227] to-transparent" />
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20 px-4">
+        <div className="w-full max-w-[800px] h-[1px] bg-gradient-to-r from-transparent via-[#C9A227] to-transparent" />
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
