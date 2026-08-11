@@ -5,7 +5,7 @@ import { CUTS_CLUB, generateWhatsAppLink } from '../data/cutsData';
 
 export const CutsClubSection: React.FC = () => {
   const handleClubSubscribe = () => {
-    const message = `Olá Thiago! Tenho interesse no CUTS CLUB (Plano Mensal de R$ 100/mês) e gostaria de me tornar membro!`;
+    const message = `Olá Thiago! Tenho interesse no CUTS CLUB (Plano Mensal de R$ 120/mês) e gostaria de me tornar membro!`;
     const link = generateWhatsAppLink(undefined, undefined, undefined, message);
     window.open(link, '_blank');
   };

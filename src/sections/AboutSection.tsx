@@ -19,7 +19,7 @@ export const AboutSection: React.FC = () => {
               className="relative w-full max-w-md aspect-[3/4] rounded-3xl overflow-hidden p-1 bg-gradient-to-tr from-[#C9A227]/40 via-white/10 to-transparent shadow-2xl"
             >
               <img
-                src="/img/thiago.jpg"
+                src="/img/thiago2.jpg"
                 alt="Thiago Menezes - Barbeiro da CUTS STUDIOS"
                 className="w-full h-full object-cover rounded-[22px] object-top"
               />

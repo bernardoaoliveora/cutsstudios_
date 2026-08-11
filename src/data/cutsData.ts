@@ -140,8 +140,8 @@ export const SERVICES: ServiceItem[] = [
 export const CUTS_CLUB = {
   title: "CUTS CLUB",
   subtitle: "O Plano Mensal Exclusivo",
-  price: 100,
-  priceFormatted: "R$ 100",
+  price: 120,
+  priceFormatted: "R$ 120",
   period: "mês",
   includes: [
     "Cortes Simples ilimitados no mês",
