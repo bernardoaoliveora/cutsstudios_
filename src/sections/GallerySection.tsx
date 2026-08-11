@@ -171,30 +171,30 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectItem }) 
             data-cursor-text="VER"
             className="md:col-span-12 group relative cursor-pointer rounded-3xl overflow-hidden bg-[#0A0A0A] border border-white/10 hover:border-[#C9A227]/50 transition-all duration-500 shadow-2xl mt-2 focus-visible:ring-2 focus-visible:ring-[#E7C75F]"
           >
-            <div className="aspect-[16/9] sm:aspect-[21/9] max-h-[420px] overflow-hidden relative">
+            <div className="relative w-full min-h-[320px] sm:min-h-[380px] md:min-h-[420px] flex flex-col justify-between p-6 sm:p-8 md:p-10 overflow-hidden">
               <img
                 src={GALLERY_ITEMS[2].frontImage}
                 alt={GALLERY_ITEMS[2].title}
-                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/70 to-transparent opacity-95" />
+              <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#050505] via-[#050505]/85 sm:via-[#050505]/70 to-[#050505]/30 sm:to-transparent opacity-95 pointer-events-none" />
 
               {/* Text Badge */}
-              <div className="absolute top-6 left-6 z-10 flex items-center gap-3">
+              <div className="relative z-10 flex flex-wrap items-center gap-3">
                 <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest bg-[#C9A227] text-[#050505]">
                   BASTIDORES & ATENDIMENTO
                 </span>
-                <span className="hidden sm:inline-block text-xs font-semibold text-neutral-400">
+                <span className="text-xs font-semibold text-neutral-300 sm:text-neutral-400">
                   Thiago Menezes em ação
                 </span>
               </div>
 
-              <div className="absolute bottom-8 left-8 right-8 z-10 max-w-xl">
-                <h3 className="font-heading font-extrabold text-2xl sm:text-4xl text-white group-hover:text-[#E7C75F] transition-colors uppercase tracking-tight">
+              <div className="relative z-10 max-w-2xl mt-8 sm:mt-0">
+                <h3 className="font-heading font-extrabold text-2xl sm:text-4xl text-white group-hover:text-[#E7C75F] transition-colors uppercase tracking-tight leading-tight">
                   {GALLERY_ITEMS[2].title}
                 </h3>
-                <p className="text-sm text-neutral-300 mt-2">
+                <p className="text-xs sm:text-sm text-neutral-300 mt-2 leading-relaxed max-w-xl">
                   Cada ajuste de máquina e tesoura é realizado para valorizar a simetria única do seu formato de rosto.
                 </p>
               </div>
