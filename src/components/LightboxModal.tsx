@@ -38,7 +38,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ item, onClose, onB
         role="dialog"
         aria-modal="true"
         aria-label={`Galeria 360 - ${item.title}`}
-        className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+        className="fixed inset-0 z-[100] overflow-y-auto"
       >
         {/* Backdrop */}
         <motion.div
@@ -49,22 +49,24 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ item, onClose, onB
           className="fixed inset-0 bg-black/92 backdrop-blur-xl"
         />
 
-        {/* Content Container */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.92, y: 15 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.92, y: 15 }}
-          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-4xl bg-[#0A0A0A] border border-white/10 rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.9)] z-10 my-6"
-        >
-          {/* Close button */}
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-black/70 text-white/80 hover:text-white hover:bg-black border border-white/15 backdrop-blur-md transition-colors focus-visible:ring-2 focus-visible:ring-[#E7C75F]"
-            aria-label="Fechar visualizador de imagem"
+        {/* Centered Scrollable Wrapper */}
+        <div className="min-h-full flex items-start sm:items-center justify-center p-3.5 sm:p-6 py-6 sm:py-8">
+          {/* Content Container */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92, y: 15 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.92, y: 15 }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            className="relative w-full max-w-4xl bg-[#0A0A0A] border border-white/10 rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.9)] z-10 my-auto"
           >
-            <X className="w-5 h-5" />
-          </button>
+            {/* Close button */}
+            <button
+              onClick={onClose}
+              className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 z-20 p-2.5 rounded-full bg-black/80 text-white/90 hover:text-white hover:bg-black border border-white/20 backdrop-blur-md transition-colors focus-visible:ring-2 focus-visible:ring-[#E7C75F]"
+              aria-label="Fechar visualizador de imagem"
+            >
+              <X className="w-5 h-5" />
+            </button>
 
           <div className="grid grid-cols-1 lg:grid-cols-12">
             {/* Image Preview Container */}
@@ -171,6 +173,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ item, onClose, onB
           </div>
         </motion.div>
       </div>
-    </AnimatePresence>
-  );
+    </div>
+  </AnimatePresence>
+);
 };

@@ -87,7 +87,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
           role="dialog"
           aria-modal="true"
           aria-labelledby="booking-modal-title"
-          className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
+          className="fixed inset-0 z-[100] overflow-y-auto"
         >
           {/* Backdrop */}
           <motion.div
@@ -98,41 +98,44 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             className="fixed inset-0 bg-black/90 backdrop-blur-xl"
           />
 
-          {/* Modal Card */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.94, y: 15 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.94, y: 15 }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-2xl bg-[#0A0A0A] border border-white/10 rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.9)] z-10 my-6 overflow-hidden"
-          >
-            {/* Ambient Gold Ambient Gradient */}
-            <div className="absolute top-0 right-0 -mt-16 -mr-16 w-56 h-56 bg-[#C9A227]/15 rounded-full blur-3xl pointer-events-none" />
+          {/* Centered Scrollable Wrapper */}
+          <div className="min-h-full flex items-start sm:items-center justify-center p-3 sm:p-6 py-6 sm:py-8">
+            {/* Modal Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.94, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.94, y: 15 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="relative w-full max-w-2xl bg-[#0A0A0A] border border-white/10 rounded-3xl p-5 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.9)] z-10 overflow-hidden my-auto"
+            >
+              {/* Ambient Gold Ambient Gradient */}
+              <div className="absolute top-0 right-0 -mt-16 -mr-16 w-56 h-56 bg-[#C9A227]/15 rounded-full blur-3xl pointer-events-none" />
 
-            {/* Header */}
-            <div className="flex items-start justify-between pb-5 border-b border-white/10 relative z-10">
-              <div className="flex items-center gap-3.5">
-                <div className="h-11 w-11 rounded-2xl bg-[#C9A227]/15 border border-[#C9A227]/30 flex items-center justify-center text-[#E7C75F] shadow-inner">
-                  <Calendar className="w-5 h-5" />
+              {/* Header */}
+              <div className="flex items-start justify-between pb-4 sm:pb-5 border-b border-white/10 relative z-10">
+                <div className="flex items-center gap-3 sm:gap-3.5 pr-2">
+                  <div className="h-9 w-9 sm:h-11 sm:w-11 rounded-2xl bg-[#C9A227]/15 border border-[#C9A227]/30 flex items-center justify-center text-[#E7C75F] shadow-inner shrink-0">
+                    <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </div>
+                  <div>
+                    <h3 id="booking-modal-title" className="font-heading font-extrabold text-lg sm:text-2xl text-white tracking-tight">
+                      AGENDAR HORÁRIO
+                    </h3>
+                    <p className="text-[11px] sm:text-xs text-neutral-400 mt-0.5">
+                      CUTS STUDIOS • Atendimento Residencial Exclusivo
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 id="booking-modal-title" className="font-heading font-extrabold text-xl sm:text-2xl text-white tracking-tight">
-                    AGENDAR HORÁRIO
-                  </h3>
-                  <p className="text-xs text-neutral-400 mt-0.5">
-                    CUTS STUDIOS • Atendimento Residencial Exclusivo
-                  </p>
-                </div>
+
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="p-2 sm:p-2.5 text-neutral-300 hover:text-white rounded-full bg-white/10 hover:bg-white/20 border border-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-[#E7C75F] shrink-0"
+                  aria-label="Fechar modal de agendamento"
+                >
+                  <X className="w-5 h-5" />
+                </button>
               </div>
-
-              <button
-                onClick={onClose}
-                className="p-2 text-neutral-400 hover:text-white rounded-full bg-white/5 hover:bg-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-[#E7C75F]"
-                aria-label="Fechar modal de agendamento"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
 
             {/* Step 1: Category Filter & Multi-Service Selection */}
             <div className="mt-6 space-y-6 relative z-10">
@@ -276,7 +279,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             </div>
           </motion.div>
         </div>
-      )}
-    </AnimatePresence>
-  );
+      </div>
+    )}
+  </AnimatePresence>
+);
 };
